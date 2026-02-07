@@ -82,8 +82,7 @@ Verifica o status da aplicação.
 **Resposta:**
 ```json
 {
-  "health": "ok",
-  "message": "Pedro passou por aqui!!!"
+  "health": "ok"
 }
 ```
 
@@ -136,7 +135,3 @@ Desenvolvido por **Pedro Chagas**
 ## 📄 Licença
 
 Este projeto está sob a licença ISC.
-
----
-
-⭐ Se este projeto foi útil para você, considere dar uma estrela!
