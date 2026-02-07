@@ -7,7 +7,7 @@ const port = 3000;
 redisService.startRedis();
 
 app.get('/health', (req, res) => {
-  res.send({ health: 'ok', message: 'Pedro passou por aqui!!!' });
+  res.send({ health: 'ok' });
 });
 
 app.get('/', async (req, res) => {
