@@ -6,11 +6,15 @@ const port = 3000;
 
 redisService.startRedis();
 
+app.get('/health', (req, res) => {
+  res.send({ health: 'ok' });
+});
+
 app.get('/', async (req, res) => {
   const visitors = await redisService.addVisitor();
   res.send({ visitors });
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Api iniciado na porta: ${port}`);
 });

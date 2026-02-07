@@ -10,14 +10,7 @@ const startRedis = async () => {
 };
 
 const addVisitor = async () => {
-  let visitors = parseInt(await client.get('visitors'), 10);
-  if (!Number.isNaN(visitors)) {
-    visitors += 1;
-  } else {
-    visitors = 1;
-  }
-
-  await client.set('visitors', visitors);
+  const visitors = await client.incr('visitors');
 
   return visitors;
 };
